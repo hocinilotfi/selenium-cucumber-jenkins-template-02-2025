@@ -30,6 +30,7 @@ public class DriverTool {
                 // ChromeOptions chromeOptions = new ChromeOptions();
                 // chromeOptions.addArguments("--headless=new");
                 ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless=new");
                 driver = WebDriverManager.chromedriver().capabilities(options).create();
                 // WebDriverManager.chromedriver().setup();
                 // driver = new ChromeDriver(chromeOptions);
