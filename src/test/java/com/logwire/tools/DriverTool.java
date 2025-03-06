@@ -27,10 +27,12 @@ public class DriverTool {
 
             case "chrome":
             default:
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless=new");
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver(chromeOptions);
+                // ChromeOptions chromeOptions = new ChromeOptions();
+                // chromeOptions.addArguments("--headless=new");
+                ChromeOptions options = new ChromeOptions();
+                driver = WebDriverManager.chromedriver().capabilities(options).create();
+                // WebDriverManager.chromedriver().setup();
+                // driver = new ChromeDriver(chromeOptions);
                 break;
         }
     }
